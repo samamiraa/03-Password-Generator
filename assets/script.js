@@ -23,4 +23,15 @@ generateBtn.addEventListener ("click", writePassword);
 function generatePassword() {
   alert("Must contain lower or uppercase letters, numbers and/or symbols");
   alert("Length must be between 8 - 128 characters");
+  alert("You must select length and which characters to include");
+
+  var userSelect = confirm("Do you wish to continue?");
+
+  if (!userSelect) {
+    alert("See you next time!");
+    return;
+  }
+
+  
+
 }
