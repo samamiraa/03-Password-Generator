@@ -1,6 +1,6 @@
 # 03-Password-Generator
 
-## Description
+## Random Password Generator Tool
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 

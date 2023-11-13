@@ -1,3 +1,10 @@
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var symbols = "!@#$%^&*()";
+var numbers = "1234567890";
+
+var passwordMessage = ("Password must contain lowercase, uppercase, numbers and/or special characters");
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -11,9 +18,9 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener ("click", writePassword);
 
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var specialCharacters = "!@#$%^&*()";
-var numbers = "1234567890";
+function generatePassword() {
+  alert("Must contain lower or uppercase letters, numbers and/or symbols");
+  alert("Length must be between 8 - 128 characters");
+}
