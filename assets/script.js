@@ -34,13 +34,13 @@ function generatePassword() {
   var passwordLength = prompt("How many characters do you want in your password?");
 
   if (passwordLength >= 8 && passwordLength <= 128) {
-    for (var i = 0; i < passwordRandom.length; i++){
-      alert("You chose: " + passwordLength)
+    for (var i = 0; i < passwordRandom.length; i++) {
+      // alert("You chose: " + passwordLength.valueOf);
     }
   } else {
     alert("Password must be between 8 - 128 characters");
     var passwordLength = prompt("How many characters do you want in your password?");
-  }
+  } 
 
   var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
 
@@ -48,7 +48,9 @@ function generatePassword() {
     var indexUpper = Math.floor(Math.random() * uppercase.length);
     var uppercaseRandom = uppercase[indexUpper];
       alert("Uppercase: " + uppercaseRandom);
-  } 
+  } else {
+    return;
+  }
 
   var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
 
@@ -56,7 +58,9 @@ function generatePassword() {
     var indexLower = Math.floor(Math.random() * lowercase.length);
     var lowercaseRandom = lowercase[indexLower];
       alert("Lowercase: " + lowercaseRandom);
-  } 
+  } else {
+    return;
+  }
 
   var numbersConfirm = prompt("Numbers? Yes or No");
 
@@ -64,6 +68,8 @@ function generatePassword() {
     var indexNumbers = Math.floor(Math.random() * numbers.length);
     var numbersRandom = numbers[indexNumbers];
       alert("Numbers: " + numbersRandom);
+  } else {
+    return;
   }
 
   var symbolsConfirm = prompt("Symbols? Yes or No");
@@ -72,6 +78,8 @@ function generatePassword() {
     var indexSymbols = Math.floor(Math.random() * symbols.length);
     var symbolsRandom = symbols[indexSymbols];
       alert("Symbols: " + symbolsRandom);
+  } else {
+    return;
   }
 
  
