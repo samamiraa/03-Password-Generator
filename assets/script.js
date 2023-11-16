@@ -30,13 +30,11 @@ function generatePassword() {
     return;
   }
 
-  var passwordRandom = uppercaseRandom + lowercaseRandom + numbersRandom + symbolsRandom;
+  var passwordRandom = " ";
   var passwordLength = prompt("How many characters do you want in your password?");
 
   if (passwordLength >= 8 && passwordLength <= 128) {
-    for (var i = 0; i < passwordRandom.length; i++) {
-      // alert("You chose: " + passwordLength.valueOf);
-    }
+    alert("You chose: " + passwordLength);
   } else {
     alert("Password must be between 8 - 128 characters");
     var passwordLength = prompt("How many characters do you want in your password?");
@@ -44,7 +42,9 @@ function generatePassword() {
 
   var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
 
-  if (uppercaseConfirm === "Yes") {
+  uppercaseConfirm = uppercaseConfirm.toUpperCase();
+
+  if (uppercaseConfirm === "YES") {
     var indexUpper = Math.floor(Math.random() * uppercase.length);
     var uppercaseRandom = uppercase[indexUpper];
       alert("Uppercase: " + uppercaseRandom);
@@ -54,7 +54,9 @@ function generatePassword() {
 
   var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
 
-  if (lowercaseConfirm === "Yes") {
+  lowercaseConfirm = lowercaseConfirm.toUpperCase();
+
+  if (lowercaseConfirm === "YES") {
     var indexLower = Math.floor(Math.random() * lowercase.length);
     var lowercaseRandom = lowercase[indexLower];
       alert("Lowercase: " + lowercaseRandom);
@@ -64,7 +66,9 @@ function generatePassword() {
 
   var numbersConfirm = prompt("Numbers? Yes or No");
 
-  if (numbersConfirm === "Yes") {
+  numbersConfirm = numbersConfirm.toUpperCase();
+
+  if (numbersConfirm === "YES") {
     var indexNumbers = Math.floor(Math.random() * numbers.length);
     var numbersRandom = numbers[indexNumbers];
       alert("Numbers: " + numbersRandom);
@@ -73,8 +77,10 @@ function generatePassword() {
   }
 
   var symbolsConfirm = prompt("Symbols? Yes or No");
+
+  symbolsConfirm = symbolsConfirm.toUpperCase();
   
-  if (symbolsConfirm === "Yes") {
+  if (symbolsConfirm === "YES") {
     var indexSymbols = Math.floor(Math.random() * symbols.length);
     var symbolsRandom = symbols[indexSymbols];
       alert("Symbols: " + symbolsRandom);
