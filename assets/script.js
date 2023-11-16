@@ -56,6 +56,12 @@ function generatePassword() {
       alert("Numbers: " + numbersRandom);
   }
 
-  var symbolsConfirm = prompt("Symbols? Yes or No")
+  var symbolsConfirm = prompt("Symbols? Yes or No");
+  
+  if (symbolsConfirm === "Yes") {
+    var indexSymbols = Math.floor(Math.random() * symbols.length);
+    var symbolsRandom = symbols[indexSymbols];
+      alert("Symbols: " + symbolsRandom);
+  }
 
 }
