@@ -3,8 +3,6 @@ var uppercase = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var symbols = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")");
 var numbers = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
 
-var passwordMessage = ("Password must contain lowercase, uppercase, numbers and/or special characters");
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -30,6 +28,18 @@ function generatePassword() {
   if (!userSelect) {
     alert("See you next time!");
     return;
+  }
+
+  var passwordRandom = uppercaseRandom + lowercaseRandom + numbersRandom + symbolsRandom;
+  var passwordLength = prompt("How many characters do you want in your password?");
+
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    for (var i = 0; i < passwordRandom.length; i++){
+      alert("You chose: " + passwordLength)
+    }
+  } else {
+    alert("Password must be between 8 - 128 characters");
+    var passwordLength = prompt("How many characters do you want in your password?");
   }
 
   var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
@@ -64,4 +74,8 @@ function generatePassword() {
       alert("Symbols: " + symbolsRandom);
   }
 
+ 
+
+  
 }
+
