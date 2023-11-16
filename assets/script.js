@@ -48,11 +48,12 @@ function generatePassword() {
     var indexUpper = Math.floor(Math.random() * uppercase.length);
     var uppercaseRandom = uppercase[indexUpper];
       alert("Uppercase: " + uppercaseRandom);
+        var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
+  } else if (uppercaseConfirm === "NO") {
+    var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
   } else {
     return;
   }
-
-  var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
 
   lowercaseConfirm = lowercaseConfirm.toUpperCase();
 
@@ -60,6 +61,9 @@ function generatePassword() {
     var indexLower = Math.floor(Math.random() * lowercase.length);
     var lowercaseRandom = lowercase[indexLower];
       alert("Lowercase: " + lowercaseRandom);
+        var numbersConfirm = prompt("Numbers? Yes or No");
+  } else if (lowercaseConfirm === "NO") {
+    var numbersConfirm = prompt("Numbers? Yes or No");
   } else {
     return;
   }
