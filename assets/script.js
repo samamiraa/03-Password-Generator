@@ -32,15 +32,30 @@ function generatePassword() {
     return;
   }
 
-  // var yes = "Yes";
-  var no = "No";
-
-  var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nPlease type Yes or No");
+  var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
 
   if (uppercaseConfirm === "Yes") {
-    var index = Math.floor(Math.random() * uppercase.length);
-    var uppercaseRandom = uppercase[index];
+    var indexUpper = Math.floor(Math.random() * uppercase.length);
+    var uppercaseRandom = uppercase[indexUpper];
       alert("Uppercase: " + uppercaseRandom);
-      
   } 
+
+  var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
+
+  if (lowercaseConfirm === "Yes") {
+    var indexLower = Math.floor(Math.random() * lowercase.length);
+    var lowercaseRandom = lowercase[indexLower];
+      alert("Lowercase: " + lowercaseRandom);
+  } 
+
+  var numbersConfirm = prompt("Numbers? Yes or No");
+
+  if (numbersConfirm === "Yes") {
+    var indexNumbers = Math.floor(Math.random() * numbers.length);
+    var numbersRandom = numbers[indexNumbers];
+      alert("Numbers: " + numbersRandom);
+  }
+
+  var symbolsConfirm = prompt("Symbols? Yes or No")
+
 }
