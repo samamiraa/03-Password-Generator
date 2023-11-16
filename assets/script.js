@@ -68,19 +68,18 @@ function generatePassword() {
     return;
   }
 
-  var numbersConfirm = prompt("Numbers? Yes or No");
-
   numbersConfirm = numbersConfirm.toUpperCase();
 
   if (numbersConfirm === "YES") {
     var indexNumbers = Math.floor(Math.random() * numbers.length);
     var numbersRandom = numbers[indexNumbers];
       alert("Numbers: " + numbersRandom);
+        var symbolsConfirm = prompt("Symbols? Yes or No");
+  }  else if (numbersConfirm === "NO") {
+    var symbolsConfirm = prompt("Symbols? Yes or No");
   } else {
     return;
   }
-
-  var symbolsConfirm = prompt("Symbols? Yes or No");
 
   symbolsConfirm = symbolsConfirm.toUpperCase();
   
