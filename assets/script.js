@@ -35,18 +35,18 @@ function generatePassword() {
 
   if (passwordLength >= 8 && passwordLength <= 128) {
     alert("You chose: " + passwordLength);
-  } else {
+    var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
+  } else if (passwordLength < 8 || passwordLength > 128) {
     alert("Password must be between 8 - 128 characters");
-    var passwordLength = prompt("How many characters do you want in your password?");
-  } 
-
-  if (passwordLength >= 8 && passwordLength <= 128) {
-    alert("You chose: " + passwordLength);
+    var passwordLengthTwo = prompt("How many characters do you want in your password?");
+  } else if (passwordLengthTwo >= 8 && passwordLengthTwo <= 128) {
+    alert("You chose: " + passwordLengthTwo);
+    var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
   } else {
+    alert("Password length does not meet criteria\nPlease start again");
     return;
   }
 
-  var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
 
   uppercaseConfirm = uppercaseConfirm.toUpperCase();
 
@@ -96,6 +96,7 @@ function generatePassword() {
   } else {
     return;
   }
+
 
   for (var i = 0; i < passwordLength.length; i++) {
 
