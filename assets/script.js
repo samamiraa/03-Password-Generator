@@ -1,7 +1,7 @@
-var lowercase = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
-var uppercase = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
-var symbols = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")");
-var numbers = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
+var lowercase = "a" + "b" + "c" + "d" + "e" + "f" + "g" + "h" + "i" + "j" + "k" + "l" + "m" + "n" + "o" + "p" + "q" + "r" + "s" + "t" + "u" + "v" + "w" + "x" + "y" + "z";
+var uppercase = "A" + "B" + "C" + "D" + "E" + "F" + "G" + "H" + "I" + "J" + "K" + "L" + "M" + "N" + "O" + "P" + "Q" + "R" + "S" + "T" + "U" + "V" + "W" + "X" + "Y" + "Z";
+var symbols = "!" + "@" + "#" + "$" + "%" + "^" + "&" + "*" + "(" + ")";
+var numbers = "1" + "2" + "3" + "4" + "5" + "6" + "7" + "8" + "9" + "0";
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -12,7 +12,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -30,23 +29,23 @@ function generatePassword() {
     return;
   }
 
-  var passwordRandom = uppercaseRandom + lowercaseRandom + numbersRandom + symbolsRandom;
   var passwordLength = prompt("How many characters do you want in your password?");
+
+  // if (passwordLength >= 8 && passwordLength <= 128) {
+    // alert("You chose: " + passwordLength);
+  //   var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
+  // } else {
+  //   alert("Password must be between 8 - 128 characters");
+  //   passwordLength = prompt("How many characters do you want in your password?");
+  // }
 
   if (passwordLength >= 8 && passwordLength <= 128) {
     alert("You chose: " + passwordLength);
     var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
-  } else if (passwordLength < 8 || passwordLength > 128) {
-    alert("Password must be between 8 - 128 characters");
-    var passwordLengthTwo = prompt("How many characters do you want in your password?");
-  } else if (passwordLengthTwo >= 8 && passwordLengthTwo <= 128) {
-    alert("You chose: " + passwordLengthTwo);
-    var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
   } else {
-    alert("Password length does not meet criteria\nPlease start again");
+    alert("Please start again");
     return;
   }
-
 
   uppercaseConfirm = uppercaseConfirm.toUpperCase();
 
@@ -97,10 +96,20 @@ function generatePassword() {
     return;
   }
 
+  var passwordRandom = "";
 
-  for (var i = 0; i < passwordLength.length; i++) {
+  if (uppercaseConfirm && lowercaseConfirm && numbersConfirm && symbolsConfirm) {
+    var allCharacters = lowercase + uppercase + numbers + symbols;
+    alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters, numbers and symbols");
+    for (var i = 0; i < passwordLength; i++) {
+      var indexAll = Math.floor(Math.random() * allCharacters.length);
+      passwordRandom += allCharacters[indexAll];
+    }
+    return passwordRandom;
+  } else if (uppercaseConfirm && lowercaseConfirm && numbersConfirm && !symbolsConfirm) {
 
   }
+
  
 
   
