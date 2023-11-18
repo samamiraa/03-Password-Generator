@@ -64,10 +64,14 @@ function generatePassword() {
   } 
   
   var passwordRandom = "";
-
+  
   if (symbolsConfirm) {
       alert("You chose to INCLUDE symbols");
-  } else 
+  } else {
+    alert("You chose to EXCLUDE symbols")
+  }
+
+  var passwordRandom = "";
 
   if (uppercaseConfirm && lowercaseConfirm && numbersConfirm && symbolsConfirm) {
     var allCharacters = lowercase + uppercase + numbers + symbols;
