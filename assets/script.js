@@ -89,6 +89,14 @@ function generatePassword() {
         passwordRandom += uppercaseLowercaseNumbers[indexUpperLowerNumb];
       }
       return passwordRandom;
+  } else if (uppercaseConfirm && lowercaseConfirm && !numbersConfirm && symbolsConfirm) {
+    var uppercaseLowercaseSymbols = uppercase + lowercase + symbols;
+    alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters and symbols");
+      for(var i = 0; i < passwordLength; i++) {
+        var indexUpperLowerSym = Math.floor(Math.random() * uppercaseLowercaseSymbols.length);
+        passwordRandom += uppercaseLowercaseSymbols[indexUpperLowerSym];
+      }
+      return passwordRandom;
   }
 
  
