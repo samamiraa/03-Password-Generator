@@ -44,17 +44,16 @@ function generatePassword() {
         var lowercaseConfirm = confirm("Lowercase letters?\nOk to confirm");
   } else {
     alert("You chose to EXCLUDE uppercase letters")
-    var lowercaseConfirm = confirm("Lowercase letters?\nYes or No");
+    var lowercaseConfirm = confirm("Lowercase letters?\nOk to confirm");
   } 
 
   if (lowercaseConfirm) {
-      alert("You chose to include lowercase letters");
-        var numbersConfirm = prompt("Numbers? Yes or No");
+      alert("You chose to INCLUDE lowercase letters");
+        var numbersConfirm = confirm("Numbers?\nOk to confirm");
   } else {
-    var numbersConfirm = prompt("Numbers? Yes or No");
+    alert("You chose to EXCLUDE lowercase letters")
+    var numbersConfirm = confirm("Numbers?\nOk to confirm");
   } 
-
-  numbersConfirm = numbersConfirm.toUpperCase();
 
   if (numbersConfirm === "YES") {
       alert("You chose to include numbers");
