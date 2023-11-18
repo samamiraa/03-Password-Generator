@@ -75,28 +75,46 @@ function generatePassword() {
 
   if (uppercaseConfirm && lowercaseConfirm && numbersConfirm && symbolsConfirm) {
     var allCharacters = lowercase + uppercase + numbers + symbols;
-    alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters, numbers and symbols");
-      for (var i = 0; i < passwordLength; i++) {
-        var indexAll = Math.floor(Math.random() * allCharacters.length);
-        passwordRandom += allCharacters[indexAll];
-      }
+      alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters, numbers and symbols");
+        for (var i = 0; i < passwordLength; i++) {
+          var indexAll = Math.floor(Math.random() * allCharacters.length);
+          passwordRandom += allCharacters[indexAll];
+        }
     return passwordRandom;
   } else if (uppercaseConfirm && lowercaseConfirm && numbersConfirm && !symbolsConfirm) {
     var uppercaseLowercaseNumbers = uppercase + lowercase + numbers;
-    alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters and numbers")
-      for(var i = 0; i < passwordLength; i++) {
-        var indexUpperLowerNumb = Math.floor(Math.random() * uppercaseLowercaseNumbers.length);
-        passwordRandom += uppercaseLowercaseNumbers[indexUpperLowerNumb];
-      }
+      alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters and numbers")
+        for(var i = 0; i < passwordLength; i++) {
+          var indexUpperLowerNumb = Math.floor(Math.random() * uppercaseLowercaseNumbers.length);
+          passwordRandom += uppercaseLowercaseNumbers[indexUpperLowerNumb];
+        }
       return passwordRandom;
   } else if (uppercaseConfirm && lowercaseConfirm && !numbersConfirm && symbolsConfirm) {
     var uppercaseLowercaseSymbols = uppercase + lowercase + symbols;
-    alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters and symbols");
-      for(var i = 0; i < passwordLength; i++) {
-        var indexUpperLowerSym = Math.floor(Math.random() * uppercaseLowercaseSymbols.length);
-        passwordRandom += uppercaseLowercaseSymbols[indexUpperLowerSym];
-      }
+      alert("You chose: " + passwordLength + " characters, uppercase & lowercase letters and symbols");
+        for(var i = 0; i < passwordLength; i++) {
+          var indexUpperLowerSym = Math.floor(Math.random() * uppercaseLowercaseSymbols.length);
+          passwordRandom += uppercaseLowercaseSymbols[indexUpperLowerSym];
+        }
       return passwordRandom;
+  } else if (uppercaseConfirm && !lowercaseConfirm && numbersConfirm && symbolsConfirm) {
+    var uppercaseNumbersSymbols = uppercase + numbers + symbols;
+      alert("You chose: " + passwordLength + " characters, uppercase letters, numbers and symbols");
+        for(var i = 0; i < passwordLength; i++) {
+          var indexUpperNumbSym = Math.floor(Math.random() * uppercaseNumbersSymbols.length);
+          passwordRandom += uppercaseNumbersSymbols[indexUpperNumbSym];
+        }
+      return passwordRandom;
+  } else if (!uppercaseConfirm && lowercaseConfirm && numbersConfirm && symbolsConfirm) {
+    var lowercaseNumbersSymbols = lowercase + numbers + symbols;
+      alert("You chose: " + passwordLength + " characters, lowercase letters, numbers and symbols");
+        for(var i = 0; i < passwordLength; i++) {
+          var indexLowerNumbSym = Math.floor(Math.random() * lowercaseNumbersSymbols.length);
+          passwordRandom += lowercaseNumbersSymbols[indexLowerNumbSym];
+        }
+      return passwordRandom;
+  } else if (uppercaseConfirm && lowercaseConfirm && !numbersConfirm && !symbolsConfirm) {
+    
   }
 
  
