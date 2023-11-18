@@ -29,15 +29,7 @@ function generatePassword() {
     return;
   }
 
-  var passwordLength = prompt("How many characters do you want in your password?");
-
-  // if (passwordLength >= 8 && passwordLength <= 128) {
-    // alert("You chose: " + passwordLength);
-  //   var uppercaseConfirm = prompt("Which criteria would you like to include in your password?\nUppercase Letters?\nYes or No");
-  // } else {
-  //   alert("Password must be between 8 - 128 characters");
-  //   passwordLength = prompt("How many characters do you want in your password?");
-  // }
+  var passwordLength = prompt("How many characters do you want in your password?\nMinimum 8 characters - maximum 128 characters");
 
   if (passwordLength >= 8 && passwordLength <= 128) {
     alert("You chose: " + passwordLength);
