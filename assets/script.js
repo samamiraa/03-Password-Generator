@@ -161,7 +161,38 @@ function generatePassword() {
           passwordRandom += numbersSymbols[indexNumbSym];
         }
       return passwordRandom;
-  } 
+  } else if (uppercaseConfirm && !lowercaseConfirm && !numbersConfirm && !symbolsConfirm) {
+    alert("You chose: " + passwordLength + " characters and uppercase letters only");
+      for(var i = 0; i < passwordLength; i++) {
+        var indexUpper = Math.floor(Math.random() * uppercase.length);
+        passwordRandom += uppercase[indexUpper];
+      }
+      return passwordRandom;
+  } else if (!uppercaseConfirm && lowercaseConfirm && !numbersConfirm && !symbolsConfirm) {
+    alert("You chose: " + passwordLength + " characters and lowercase letters only")
+      for(var i = 0; i < passwordLength; i++) {
+        var indexLower = Math.floor(Math.random() * lowercase.length);
+        passwordRandom += lowercase[indexLower];
+      }
+      return passwordRandom;
+  } else if (!uppercaseConfirm && !lowercaseConfirm && numbersConfirm && !symbolsConfirm) {
+    alert("You chose: " + passwordLength + " characters and numbers only");
+      for(var i = 0; i < passwordLength; i++) {
+        var indexNumb = Math.floor(Math.random() * numbers.length);
+        passwordRandom += numbers[indexNumb];
+      }
+      return passwordRandom;
+  } else if (!uppercaseConfirm && !lowercaseConfirm && !numbersConfirm && symbolsConfirm) {
+    alert("You chose: " + passwordLength + " characters and symbols only");
+      for(var i = 0; i < passwordLength; i++) {
+        var indexSym = Math.floor(Math.random() * symbols.length);
+        passwordRandom += symbols[indexSym];
+      }
+      return passwordRandom;
+  } else {
+    alert("You must choose at least one of the following\nUppercase letters, Lowercase letters, Numbers and/or Symbols\nPlease start again");
+    return;
+  }
 
  
 
