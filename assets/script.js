@@ -42,9 +42,7 @@ function generatePassword() {
   uppercaseConfirm = uppercaseConfirm.toUpperCase();
 
   if (uppercaseConfirm === "YES") {
-    var indexUpper = Math.floor(Math.random() * uppercase.length);
-    var uppercaseRandom = uppercase[indexUpper];
-      alert("Uppercase: " + uppercaseRandom);
+      alert("You chose to include uppercase letters");
         var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
   } else if (uppercaseConfirm === "NO") {
     var lowercaseConfirm = prompt("Lowercase letters?\nYes or No");
@@ -55,9 +53,7 @@ function generatePassword() {
   lowercaseConfirm = lowercaseConfirm.toUpperCase();
 
   if (lowercaseConfirm === "YES") {
-    var indexLower = Math.floor(Math.random() * lowercase.length);
-    var lowercaseRandom = lowercase[indexLower];
-      alert("Lowercase: " + lowercaseRandom);
+      alert("You chose to include lowercase letters");
         var numbersConfirm = prompt("Numbers? Yes or No");
   } else if (lowercaseConfirm === "NO") {
     var numbersConfirm = prompt("Numbers? Yes or No");
@@ -68,9 +64,7 @@ function generatePassword() {
   numbersConfirm = numbersConfirm.toUpperCase();
 
   if (numbersConfirm === "YES") {
-    var indexNumbers = Math.floor(Math.random() * numbers.length);
-    var numbersRandom = numbers[indexNumbers];
-      alert("Numbers: " + numbersRandom);
+      alert("You chose to include numbers");
         var symbolsConfirm = prompt("Symbols? Yes or No");
   }  else if (numbersConfirm === "NO") {
     var symbolsConfirm = prompt("Symbols? Yes or No");
@@ -81,9 +75,7 @@ function generatePassword() {
   symbolsConfirm = symbolsConfirm.toUpperCase();
   
   if (symbolsConfirm === "YES") {
-    var indexSymbols = Math.floor(Math.random() * symbols.length);
-    var symbolsRandom = symbols[indexSymbols];
-      alert("Symbols: " + symbolsRandom);
+      alert("You chose to include symbols");
   } else {
     return;
   }
