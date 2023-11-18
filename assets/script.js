@@ -55,25 +55,19 @@ function generatePassword() {
     var numbersConfirm = confirm("Numbers?\nOk to confirm");
   } 
 
-  if (numbersConfirm === "YES") {
-      alert("You chose to include numbers");
-        var symbolsConfirm = prompt("Symbols? Yes or No");
-  }  else if (numbersConfirm === "NO") {
-    var symbolsConfirm = prompt("Symbols? Yes or No");
-  } else {
-    return;
-  }
-
-  symbolsConfirm = symbolsConfirm.toUpperCase();
+  if (numbersConfirm) {
+      alert("You chose to INCLUDE numbers");
+        var symbolsConfirm = confirm("Symbols?\nOk to confirm");
+  }  else {
+    alert("You chose to EXCLUDE numbers")
+    var symbolsConfirm = confirm("Symbols?\nOk to confirm");
+  } 
   
-  
-  if (symbolsConfirm === "YES") {
-      alert("You chose to include symbols");
-  } else {
-    return;
-  }
-
   var passwordRandom = "";
+
+  if (symbolsConfirm) {
+      alert("You chose to INCLUDE symbols");
+  } else 
 
   if (uppercaseConfirm && lowercaseConfirm && numbersConfirm && symbolsConfirm) {
     var allCharacters = lowercase + uppercase + numbers + symbols;
