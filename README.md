@@ -22,6 +22,7 @@ To start the prompts, the user must click the generate password button. When pre
 <br>
 The next prompt will ask the user if they would like to continue.<br>
 <img width="1280" alt="pwcontinue" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/f950283f-20ff-4aab-a384-0030c7150657"><br>
+<br>
 When the user presses "cancel" then an alert message displays and then exits the prompts.<br>
 <img width="1272" alt="pwseeyounexttime" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/c919bdc6-2ab1-48c0-9b50-e9b2b3257c08"><br>
 <br>
@@ -33,17 +34,21 @@ When the user inputs less than 8 or more than 128 characters, an alert message i
 <br>
 When the user inputs a valid number, an alert messages displays their choice.<br>
 <img width="1274" alt="pwlengthconfirm" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/dcaff458-1dcb-4146-9ab5-375f8da81321"><br>
+<br>
 The next prompt will ask if the user would like to include uppercase letters.<br>
 <img width="1274" alt="uppercaseconfirm" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/81127c85-67a3-4d1a-8699-4ebde7f12c87"><br>
+<br>
 When the user presses "cancel", it will display they chose to exclude uppercase letters and then will move on to asking if they would like to include lowercase letters.<br>
 <img width="1273" alt="cancelexclude" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/2d0cb386-9db9-449c-9d91-3fb7d21a435d"><br>
 <img width="1274" alt="lowercaseconfirm" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/2809626b-6fa9-4381-96bc-5712b21e03f0"><br>
 <br>
-When a user presses "OK", a message is displayed they chose to inclue lowercase letters. This will apply to the numbers and symbols prompt.<br>
+When a user presses "OK", a message is displayed they chose to inclue lowercase letters. This will apply to the numbers and symbols prompt as well.<br>
 <img width="1272" alt="okinclude" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/22656cef-e1ce-434f-859d-809de613fb5b"><br>
+<br>
 After all specific criteria is selected, an alert message will display the users choices.<br>
 <img width="1270" alt="lengthcritconfirm" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/7a772d22-66b7-4b6f-a083-d84dc3457cf4"><br>
-Finally, the generated randomized password will be displayed in the area above the generate button.<br>
+<br>
+Finally, the generated randomized password will be displayed in the area above the generate password button.<br>
 <img width="1270" alt="generatedpassworddisplay" src="https://github.com/samamiraa/03-Password-Generator/assets/146762114/ba796f51-d91f-471b-8932-91e47abaca8e"><br>
 
 ## Credits
@@ -78,3 +83,4 @@ N/A
 ## Tests
 
 Please find the live URL here and refer to the usage section for a tutorial for some guidance.
+https://samamiraa.github.io/03-Password-Generator
